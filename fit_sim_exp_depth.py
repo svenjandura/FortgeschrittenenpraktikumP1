@@ -30,6 +30,11 @@ for i in range(5):
     x_diff[i] = x_data2[i] - x_data[np.where(np.floor(x_coord*10)/10
                                         == x_coord2[i])[0][0]]
 
+plt.plot(x_coord, x_data)
+plt.figure()
+plt.plot(x_coord2, x_data2)
+plt.show()
+
 def difference(x, num, dev):
     return x - num * x_data[np.where(np.floor(x_coord*10)/10 ==
                                      x_coord2[np.where(x_data2 == x)[0][0]])[0][0]]
