@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
 table = np.loadtxt('depthDose2.txt', skiprows=14, dtype=float,
-                   delimiter=';', usecols=(0, 1, 2, 3), encoding="ISO-8859-1")
+                   delimiter=';', usecols=(0, 1, 2, 3))#, encoding="ISO-8859-1")
 
 table = np.transpose(table)
 
@@ -30,6 +30,7 @@ b = (-0.0975 - np.sqrt(0.065169))/0.5709
 popt, pcov = curve_fit(decay, x_coord, x_data, p0=(0.56, -1.366, 0))
 #popt, pcov = curve_fit(decay, x_coord, x_data, p0=(a, b))
 
-plt.plot(x_coord, x_data)
+plt.plot(x_coord, x_data, 'x')
 plt.plot(x_coord, decay(x_coord, popt[0], popt[1], popt[2]))
+plt.legend(['measured data', 'fit'])
 plt.show()
