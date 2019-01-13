@@ -43,8 +43,12 @@ params, cov = curve_fit(fit_function, x_coord2, x_data2, p0=initialParams)
 x_coord_mod = [x-params[0] for x in x_coord2]
 x_data_mod = [ (y-params[1])/params[2] for y in x_data2]
 
-plt.plot(x_coord_mod,x_data_mod,'b+')
-plt.plot(x_coord, [simulation_interpolated(x) for x in x_coord], 'r-')
+
+print(params)
+print(cov)
+shifted_x_coords = np.linspace(-3,7, num=500)
+plt.plot(x_coord2,x_data2,'b+')
+plt.plot(shifted_x_coords, [fit_function(x, *params) for x in shifted_x_coords], 'r-')
 plt.xlabel("$z$ [mm]")
 plt.ylabel("intensity [a.u]")
 plt.legend(["measured data", "FLUKA simulation"])
