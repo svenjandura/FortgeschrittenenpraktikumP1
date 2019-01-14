@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.31)  13 JAN 2019 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.31)  14 JAN 2019 08:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -641,61 +641,58 @@ Package pdftex.def Info: overviewCut.png  used on input line 64.
 <Fit_invers_quadratisch.png, id=30, 462.528pt x 346.896pt>
 File: Fit_invers_quadratisch.png Graphic file (type png)
 <use Fit_invers_quadratisch.png>
-Package pdftex.def Info: Fit_invers_quadratisch.png  used on input line 126.
+Package pdftex.def Info: Fit_invers_quadratisch.png  used on input line 128.
 (pdftex.def)             Requested size: 292.77629pt x 219.59367pt.
 <experiment_simulation_fit.png, id=31, 462.528pt x 346.896pt>
 File: experiment_simulation_fit.png Graphic file (type png)
 <use experiment_simulation_fit.png>
-Package pdftex.def Info: experiment_simulation_fit.png  used on input line 130.
+Package pdftex.def Info: experiment_simulation_fit.png  used on input line 132.
 
 (pdftex.def)             Requested size: 292.77629pt x 219.59367pt.
 <2D_Dose_Z0.png, id=32, 462.528pt x 346.896pt>
 File: 2D_Dose_Z0.png Graphic file (type png)
 <use 2D_Dose_Z0.png>
-Package pdftex.def Info: 2D_Dose_Z0.png  used on input line 144.
+Package pdftex.def Info: 2D_Dose_Z0.png  used on input line 146.
 (pdftex.def)             Requested size: 204.9466pt x 153.70923pt.
 <2D_Dose_Z3.png, id=33, 462.528pt x 346.896pt>
 File: 2D_Dose_Z3.png Graphic file (type png)
 <use 2D_Dose_Z3.png>
-Package pdftex.def Info: 2D_Dose_Z3.png  used on input line 147.
+Package pdftex.def Info: 2D_Dose_Z3.png  used on input line 149.
 (pdftex.def)             Requested size: 204.9466pt x 153.70923pt.
 <xScanZ0.png, id=34, 462.528pt x 346.896pt>
 File: xScanZ0.png Graphic file (type png)
 <use xScanZ0.png>
-Package pdftex.def Info: xScanZ0.png  used on input line 160.
+Package pdftex.def Info: xScanZ0.png  used on input line 162.
 (pdftex.def)             Requested size: 292.77629pt x 219.59367pt.
 <yScanZ0.png, id=35, 462.528pt x 346.896pt>
 File: yScanZ0.png Graphic file (type png)
 <use yScanZ0.png>
-Package pdftex.def Info: yScanZ0.png  used on input line 164.
+Package pdftex.def Info: yScanZ0.png  used on input line 166.
 (pdftex.def)             Requested size: 292.77629pt x 219.59367pt.
  [5] [6 <./Fit_invers_quadratisch.png> <./experiment_simulation_fit.png> <./2D_
 Dose_Z0.png> <./2D_Dose_Z3.png>] [7 <./xScanZ0.png> <./yScanZ0.png>]
-[8] (./P1_Auswertung.bbl) [9] (./P1_Auswertung.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[8] (./P1_Auswertung.bbl) [9] (./P1_Auswertung.aux) ) 
 Here is how much of TeX's memory you used:
  7435 strings out of 492639
  120037 string characters out of 6135496
- 306759 words of memory out of 5000000
+ 307759 words of memory out of 5000000
  11199 multiletter control sequences out of 15000+600000
  16449 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,12n,52p,9147b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on P1_Auswertung.pdf (9 pages, 295265 bytes).
+</usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti10.pfb>
+Output written on P1_Auswertung.pdf (9 pages, 295816 bytes).
 PDF statistics:
  101 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream

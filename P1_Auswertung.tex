@@ -106,6 +106,8 @@ We use a Monte Carlo Simulation to calculate the dose distribution for our setup
 
 In our experiment, we use the software \textit{FLUKA} for the simulation, and the GUI \textit{FLAIR} for FLUKA. In FLUKA, we simulated the dose distribution, taking into account the full geometry of the radiation source, including its shielding, and the geometry of the water tank, but not the scintillation detector. This is justified, since in the actual scintillator the deposited dose is approximately the same as it would be in water. This is not true for other parts of the detector, however, we minimize the influence of those parts by pointing the detector towards the source.
 
+The FLUKA Software returns the resulting dose distribution normalized to a single particle. To obtain the same dose as in the experiment, we need to multiply with the number of $\beta$-Decays per minute in our source, which is just given by the total activity (Answer to \textit{Question 6}).
+
 We simulated $10^9-1$ particles. 
 
 
