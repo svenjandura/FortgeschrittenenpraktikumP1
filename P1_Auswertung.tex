@@ -86,7 +86,7 @@ $$A(t) = -\frac{\mathrm{d}N}{\mathrm{d}t} = -\frac{\mathrm{d}}{\mathrm{d}t}N(t_0
 we have
 
 $$N(t_0) = \frac{t_{1/2}A(t_0)}{\log(2)} = (1.0 \pm 0.3)10^{17}$$
-So there where $10^{17}$ $~^{90}$Sr atoms in the source at calibration time.
+So there were $10^{17}$ $~^{90}$Sr atoms in the source at calibration time.
 
 \textit{Answer to Question 3:} Assume there are $N_0$ $~^{90}$Sr atoms at calibration time. Then at $t_{start}$, there are $N_{Sr}(t_{start}) = 2^{-(t_{start}-t_{0})/t_{1/2,Sr}}N_0 = (0.67 \pm 0.08)N_0$ $~^{90}$Sr atoms. There are $\frac{\log(2)}{t_{1/2,Sr}}N_{Sr}(t_{start})$ $~^{90}$Y atoms produced per unit time. Since the half-life of $~^{90}$Y is a lot smaller then the half-life time of $~^{90}$Sr, the concentration of $~^{90}$Y is in a quasistationary state, so there are also $\frac{\log(2)}{t_{1/2,Sr}}N_{Sr}(t_{start})$ $~^{90}$Y atoms decaying per unit time. Hence $A_{Y}(t_{start}) = \frac{\log(2)}{t_{1/2,Sr}}N_{Sr}(t_{start})$, so $N_Y(t_{start})=\frac{t_{1/2,Y}}{t_{1/2,Sr}}N_{Sr}(t_{start}) = (1.7 \pm 0.7)10^{-4}N_0$. The remaining atoms are $~^{90}$Zr, so $N_{Zr}(t_{start})=N_0-N_{Sr}(t_{start})=(0.33 \pm 0.8)N_0$.
 
@@ -106,9 +106,18 @@ We use a Monte Carlo Simulation to calculate the dose distribution for our setup
 
 In our experiment, we use the software \textit{FLUKA} for the simulation, and the GUI \textit{FLAIR} for FLUKA. In FLUKA, we simulated the dose distribution, taking into account the full geometry of the radiation source, including its shielding, and the geometry of the water tank, but not the scintillation detector. This is justified, since in the actual scintillator the deposited dose is approximately the same as it would be in water. This is not true for other parts of the detector, however, we minimize the influence of those parts by pointing the detector towards the source.
 
-The FLUKA Software returns the resulting dose distribution normalized to a single particle. To obtain the same dose as in the experiment, we need to multiply with the number of $\beta$-Decays per minute in our source, which is just given by the total activity (Answer to \textit{Question 6}).
+%Unfortunatly the following idea does not yield correct results, so we leave it out
+%For each point in the simulation, the FLUKA returns the average dose deposited by a \textit{single} particle in a volume %$V_{bin}$ around the point. In the experiment, we measure the dose deposited in a time $\Delta t$ by a source of activity $A$ in a volume $V_{scintillator}$. Thus we get the following relation between the dose from the experiment and from the simulation:
 
-We simulated $10^9-1$ particles. 
+%$$D_ {experiment} = A \Delta t \frac{V_{scintillator}}{V_{bin}} D_{FLUKA}$$
+
+%For $A = 44 \pm 8 \textrm{MBq}$, $\Delta t = 60 \mathrm{s}$ (since the Optidos software returns it's results normalized to one minute measurement time), $V_{scintillator}= 0.8 \mathrm{mm}^ 3$ and $V_{bin}=33.8 \mathrm{mm}^3$ (In the simulation a bin had the dimensions 0.0135mm x 50mm x 50 mm), this yields (Answer to \textit{Question 6}):
+
+%$$D_{expeirment} = 6.2 \cdot 10^ 7 D_{FLUKA}$$
+
+Note that the FLUKA software returns results normalized to a single particle. To compare there results with the experiment, they need to be multiplied with the number of emitted particles during a single measurement. A single measurement lasts $\Delta t = 60 \mathrm{s}$. Then we get $D_{experiment} = A\Delta t D_{FLUKA}$ (Answer to \textit{Question 6}).
+
+We simulated $10^9-1$ particles, the simulation took around 16 hours.
 
 
 \section{Experimental Results}
@@ -118,9 +127,9 @@ We approximated the $x$- and $y$- coordinate of our source by doing short scans 
 \subsection{Radial Direction}
 
 
-We measured the dose distribution at constant $x=x_0$, $y=y_0$ for $z$ between 0 and 6mm. We expect that the intensity drops with a $\frac{1}{z^ 2}$ law. To verify this, we fitted the a curve of the form $\frac{A}{(z-z_0)^ 2}+I_0$ against the measured data. The result is shown in Figure \ref{radial_fits} (a). We approximate the uncertainty in $z$-direction to be $\pm 0.05 \mathrm{mm}$, since the stepper motor displays its position with a lowest digit of $0.1\mathrm{mm}$. The error for the intensity consists of a systematic and a random error. The systematic error comes mainly from the calibration and was estimated to $0.7\%$ in section 2.2. Since it affects all values by the same factor, we ignore it in the fit to $\frac{1}{z^2}$. The random uncertainty of the intensity is given by the Optidos-Software. For the first 12 value the uncertainty is given to be less the $0.5\%$. For value 13 and 14 it is given to be between $0.5\%$ and $1.0\%$. For the last 7 values, the uncertainty is given to be larger then $1.0\%$. We expect the relative random uncertainty to scale proportional to $N^ {-1/2}$, where $N$ is the number of particles the Optidos-System detects. $N$ should scale line $z^ {-2}$, so the random uncertainty should scale like $z^ {-1}$ Assuming that the uncertainty for value 14 is exactly $1\%$, we use this relation to estimate the error for the last 7 values. This leads to an uncertainty for $1.6\%$ for the last value.
+We measured the dose distribution at constant $x=x_0$, $y=y_0$ for $z$ between 0 and 6mm. We expect that the intensity drops with a $\frac{1}{z^ 2}$ law. To verify this, we fitted a curve of the form $\frac{A}{(z-z_0)^ 2}+I_0$ against the measured data. The result is shown in Figure \ref{radial_fits} (a). We approximate the uncertainty in $z$-direction to be $\pm 0.05 \mathrm{mm}$, since the stepper motor displays its position with a lowest digit of $0.1\mathrm{mm}$. The error for the intensity consists of a systematic and a random error. The systematic error comes mainly from the calibration and was estimated to $0.7\%$ in section 2.2. Since it affects all values by the same factor, we ignore it in the fit to $\frac{1}{z^2}$. The random uncertainty of the intensity is given by the Optidos-Software. For the first 12 values the uncertainty is given to be less the $0.5\%$. For values 13 and 14 it is given to be between $0.5\%$ and $1.0\%$. For the last 7 values, the uncertainty is given to be larger then $1.0\%$. We expect the relative random uncertainty to scale proportional to $N^ {-1/2}$, where $N$ is the number of particles the Optidos-System detects. $N$ should scale like $z^ {-2}$, so the random uncertainty should scale like $z^ {-1}$. Assuming that the uncertainty for value 14 is exactly $1\%$, we use this relation to estimate the error for the last 7 values. This leads to an uncertainty of $1.6\%$ for the last value.
 
-We also fitted this dose distribution against the dose distribution we expect from the FLUKA-Simulation (Fig. \ref{radial_fits} (b)). This yields that the center of the source is at $-1.5 \mathrm{mm}$. Both fits give a good approximation of the data, but they deviate more that 3 times the estimated uncertainty from the measured data at multiple points. For both fits, the measured values are below the fit for $z \approx 2.5 \mathrm{mm}$ and above the fit for $z > 5 \mathrm{mm}$. We suspect that this is the case because we neglected the effects of the materials surrounding the scintillator. 
+We also fitted this dose distribution against the dose distribution we expect from the FLUKA-Simulation (Fig. \ref{radial_fits} (b)). This yields that the center of the source is at $-1.5 \mathrm{mm}$. Both fits give a good approximation of the data with minor deviations. For both fits, the measured values are below the fit for $z \approx 2.5 \mathrm{mm}$ and above the fit for $z > 5 \mathrm{mm}$. We suspect that this is the case because we neglected the effects of the materials surrounding the scintillator. 
 
  \begin{figure}
  \centering
@@ -152,9 +161,9 @@ We measured the dose distribution in planes of constant $z$. The results for $z=
 \label{2D Plots}
 \end{figure}
 
-We also measured the dose distribution for fixed $z=0, x=x_0$ and varying $y$, as well as for fixed $z=0, y=y_0$ and varying $x$. We compared these results with the same results from the simulation. Based on the position of the source at $z=-1.5 \mathrm{mm}$ we used the plane with distance 1.5mm to the source when getting data from the simulation.  Both results are shown in Fig. \ref{plane-fits}. There are significant deviations between the measured data and the simulation. Part of the reason for that might again be, that the simulation neglected the materials surrounding the scintilator. However, according to \cite{Ref:2}, the deposited dose in the surrounding materials is between 80$\%$ and $110\%$ of the dose that would be deposited in water. Therefore, this effect cannot fully explain the deviations. We also note that the the measured data in $x$ and $y$ direction is almost identical, while in the simulation the distribution in $x$-direction is significantly broader then in $y$-direction.
+We also measured the dose distribution for fixed $z=0, x=x_0$ and varying $y$, as well as for fixed $z=0, y=y_0$ and varying $x$. We compared these results with the same results from the simulation. Based on the position of the source at $z=-1.5 \mathrm{mm}$ we used the plane with distance 1.5mm to the source when getting data from the simulation.  Both results are shown in Fig. \ref{plane-fits}. There are significant deviations between the measured data and the simulation. Part of the reason for that might again be that the simulation neglected the materials surrounding the scintilator. However, according to \cite{Ref:2}, the deposited dose in the surrounding materials is between 80$\%$ and $110\%$ of the dose that would be deposited in water. Therefore, this effect cannot fully explain the deviations. We also note that the the measured data in $x$ and $y$ direction is almost identical, while in the simulation the distribution in $x$-direction is significantly broader than in $y$-direction.
 
-In Fig. \ref{plane-fits} we aligned the data from the simulation with the measured data "by eye", This leads to a slight improvement of the values for $x_0$ and $y_0$: We get $x_0=27.1 \mathrm{mm}$ and $y_0 = 16.8 \mathrm{mm}$. Thus, in both coordinates our initial approximations where off by 2mm.
+In Fig. \ref{plane-fits} we aligned the data from the simulation with the measured data "by eye". This leads to a slight improvement of the values for $x_0$ and $y_0$: We get $x_0=27.1 \mathrm{mm}$ and $y_0 = 16.8 \mathrm{mm}$. Thus, in both coordinates our initial approximations where off by 2mm.
 
  \begin{figure}
  \centering
@@ -172,7 +181,7 @@ In Fig. \ref{plane-fits} we aligned the data from the simulation with the measur
 
 \section{Summary}
 
-In this experiment, we measured the three dimensional dose distribution of a $~^ {90}$Sr-Source in a water tank to simulate the dose deposition in medical applications, like Brachytherapy. We also simulated the dose distribution using the software FLUKA. The results of the simulation and the measurements agree with slight deviations in the radial direction. For planes of constant $z$, the results of the simulation and the measurement differ significantly. These deviations might be explained partially by the negligence of the materials surrounding the scinitallator in the simulation. 
+In this experiment, we measured the three dimensional dose distribution of a $~^ {90}$Sr-Source in a water tank to simulate the dose deposition in medical applications, like Brachytherapy. We also simulated the dose distribution using the software FLUKA. The results of the simulation and the measurements agree with slight deviations in the radial direction. The measurements also agree with the expected $r^ {-2}$ law in the radial direction.  For planes of constant $z$, the results of the simulation and the measurement differ significantly. These deviations might be explained partially by the negligence of the materials surrounding the scinitallator in the simulation. 
 
 \newpage
 
